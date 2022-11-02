@@ -167,39 +167,40 @@ img {
 }
 
 /* Sobre */
-.sobre-tech {
+.sobre-tema {
 	background-position: right;
 	background-repeat: repeat, no-repeat;
 	background-size: 100%, 110rem;
 }
 
-.sobre-tech {
+.sobre-tema {
 	background-image: linear-gradient( to bottom, transparent 50%, var(--primario) 0% ), url(../img/seguridad.jpg);
 }
 
 @media (min-width: 768px) {
-	.sobre-tech {
-		background-repeat: repeat, no-repeat;
+	.sobre-tema {
+        background-size: 100%, 210rem;
+	    background-repeat: repeat, no-repeat;
 	}
-    .sobre-tech {
+    .sobre-tema {
 		background-image: linear-gradient( to left, transparent 50%, var(--primario) 0% ), url(../img/seguridad.jpg);
 	}
 }
 
 @media (min-width: 1600px) {
-	.sobre-tech {
+	.sobre-tema {
 		background-size: 100%, 210rem;
 	}
 }
 
-.sobre-tech-grid {
+.sobre-tema-grid {
 	display: grid;
 	grid-template-rows: repeat(2, 40rem);
 	row-gap: var(--separacion);
 }
 
 @media (min-width: 768px) {
-	.sobre-tech-grid {
+	.sobre-tema-grid {
 		grid-template-rows: unset;
 		row-gap: unset;
 		grid-template-columns: repeat(2, 1fr);
@@ -208,7 +209,7 @@ img {
 	}
 }
 
-.text-sobre-tech {
+.text-sobre-tema {
 	grid-row: 2 / 3;
 	color: var(--blanco);
 	display: flex;
@@ -218,16 +219,151 @@ img {
 }
 
 @media (min-width: 768px) {
-	.text-sobre-tech{
+	.text-sobre-tema{
 		padding-bottom: 0;
 	}
 }
 
-.text-sobre-tech h2 {
+.text-sobre-tema h2 {
 	font-size: 4rem;
 }
 
-.text-sobre-tech p {
+.text-sobre-tema p {
 	font-size: 2rem;
 	line-height: 2;
+}
+
+/* tipos */
+
+.tipos {
+	padding: var(--separacion) 0;
+}
+
+.header-tipos {
+	font-size: 6rem;
+	margin-bottom: var(--separacion);
+}
+
+.listado-tipos {
+	display: flex;
+	flex-direction: column-reverse;
+}
+
+@media (min-width: 992px) {
+	.listado-tipos {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(2, 20rem);
+		gap: 4rem;
+	}
+}
+
+.tipo {
+	background-color: var(--grisClaro);
+	margin-bottom: 2rem;
+	padding-left: 4rem;
+	color: var(--primario);
+	border-radius: 2rem;
+	min-height: 21rem;
+	background-repeat: no-repeat;
+	background-position: 90% center;
+	background-size: 15rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	transition-property: transform background-size;
+	transition-duration: .3s;
+}
+
+.tipo:hover {
+	transform: scale(1.1);
+	background-size: 30rem;
+}
+
+@media (min-width: 992px) {
+	.tipo {
+		margin-bottom: 0;
+	}
+}
+
+.tipo h3 {
+	font-size: 2.4rem;
+}
+
+.tipo .tema {
+	font-size: 1.8rem;
+}
+
+.tipo:first-of-type {
+	margin-bottom: 0;
+}
+
+/* newsletter */
+.defensiva {
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-size: 100%, 70rem;
+}
+
+.defensiva {
+	background-image: linear-gradient( to bottom, transparent 50%, var( --blanco ) 0% ), url(../img/redes_seguridad.jpg);
+}
+
+
+@media (min-width: 768px) {
+	.defensiva {
+		background-position: center, -21rem 0rem;
+		background-size: 100%, 100rem;
+		padding: 10rem 0;
+	}
+	.defensiva {
+		background-image: linear-gradient( to right, transparent 50%, var( --blanco ) 0% ), url(../img/redes_seguridad.jpg);
+	}
+}
+
+.contenido-defensiva {
+	display: grid;
+	grid-template-rows: repeat(2, 30rem);
+	gap: var(--separacion);
+}
+
+@media (min-width: 768px) {
+	.contenido-defensiva {
+		grid-template-rows: unset;
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+.texto-defensiva {
+	grid-row: 2 / 3;
+}
+
+@media (min-width: 768px) {
+	.texto-defensiva {
+		grid-row: unset;
+		grid-column: 2 / 3;
+	}
+}
+
+/* Footer */
+
+.footer {
+	margin-top: 10rem;
+}
+
+@media (min-width: 576px) {
+	.footer {
+		margin: 0;
+	}
+}
+
+.footer p {
+	text-align: center;
+	font-family: var(--fuenteSecundaria);
+	text-transform: uppercase;
+	font-size: 2rem;
+	font-weight: 900;
+	color: var(--primario);
+	padding: 2rem 0;
+	line-height: 0;
 }
